@@ -1,3 +1,15 @@
+elFinder -- Continuum Fork
+===========================
+
+## run
+
+Need php5.4+
+
+```bash
+cd deploy 
+php -S localhost:8585
+```
+
 elFinder
 ========
 
@@ -70,7 +82,20 @@ Support
  * [Issues](https://github.com/Studio-42/elFinder/issues)
  * [Forum](http://elfinder.org/forum/)
  * <dev@std42.ru>
+## setup
 
+Developer setup
+-------
+
+```bash
+git clone git@github.com:ContinuumIO/elFinder.git
+cd elFinder
+npm install jake
+npm install ocss
+npm install uglify-js
+mkdir build
+jake -C ./build elFinder
+```
 
 Authors
 -------
