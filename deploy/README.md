@@ -6,7 +6,7 @@ elFinder -- Continuum Fork
 Need php5.4+
 
 ```bash
-cd build
+cd deploy
 php -S localhost:8585
 ```
 
