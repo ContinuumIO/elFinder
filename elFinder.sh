@@ -1,4 +1,5 @@
 #!/bin/bash
 PORT=$1
-cd ${PWD}/deploy
-/usr/local/php5/bin/php -S localhost:$1
+el_dir=/opt/wakari/elFinder/
+cd $el_dir/deploy
+/usr/bin/php -S 0.0.0.0:$1
