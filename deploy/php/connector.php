@@ -34,7 +34,6 @@ $opts = array(
         array(
             'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
             'path'          =>  getenv("HOME"),  // path to files (REQUIRED)
-            'URL'           => 'http://localhost/files/home/',   // URL to files (REQUIRED)
             'alias'         => 'Home', // The name to replace your actual path name. (OPTIONAL)
             'accessControl' => 'access', // disable and hide dot starting files (OPTIONAL)
             'tmbURL'        => 'https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/img' 
@@ -42,7 +41,6 @@ $opts = array(
         array(
             'driver'        => 'LocalFileSystem',
             'path'          => getenv("PROJECT_HOME"),
-            'URL'           => 'http://localhost/files/project/',
             'alias'         => getenv("PROJECT_NAME"),
             'accessControl' => 'access',      // disable and hide dot starting files (OPTIONAL)
             'tmbURL'        => 'https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/img' 
