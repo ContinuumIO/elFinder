@@ -13,4 +13,4 @@ if [ ! -d ${user_project_dir} ]
         ln -s ${el_dir}/deploy/php ${user_project_dir}/php
 fi
 cd ${el_dir}/deploy
-/usr/local/php5/bin/php -S 0.0.0.0:$PORT 
+/usr/bin/php -S 0.0.0.0:$PORT 
