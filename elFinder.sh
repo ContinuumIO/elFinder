@@ -4,6 +4,14 @@ URLPREFIX=$2
 el_dir=/opt/wakari/elFinder/
 user_project_dir=${el_dir}/deploy${URLPREFIX}
 
+log="/tmp/elFinder.log"
+echo "init log" > $log
+id >> $log
+echo $1 >> $log
+echo $2 >> $log
+echo $el_dir >> $log
+echo $user_project_dir >> $log
+
 echo ${user_project_dir}
 if [ ! -d ${user_project_dir} ] 
     then
