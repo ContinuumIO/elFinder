@@ -12,6 +12,7 @@ echo $2 >> $log
 echo $el_dir >> $log
 echo $user_project_dir >> $log
 
+echo $PORT, $URLPREFIX, $el_dir
 echo ${user_project_dir}
 if [ ! -d ${user_project_dir} ] 
     then
@@ -20,5 +21,11 @@ if [ ! -d ${user_project_dir} ]
         ln -s ${el_dir}/deploy/index.html ${user_project_dir}/index.html
         ln -s ${el_dir}/deploy/php ${user_project_dir}/php
 fi
+
+# export the PROJECT_HOME env var
+p=`echo ${URLPREFIX} | cut -d '/' -f 1-3`
+p_home='/projects'${p}
+export PROJECT_HOME=${p_home}
+
 cd ${el_dir}/deploy
 /usr/bin/php -S 0.0.0.0:$PORT 
