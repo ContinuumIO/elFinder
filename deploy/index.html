@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>elFinder 2.0</title>
+        <title>Filemanager</title>
 
 		<!-- jQuery and jQuery UI (REQUIRED) -->
 		<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/themes/smoothness/jquery-ui.css">
@@ -17,13 +17,16 @@
         <script src='https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/js/elfinder.min.js'></script>
         <script src='https://d3uybqv7a64u59.cloudfront.net/latest/application.js'></script>
 
+        <link rel="icon" href="https://d3uybqv7a64u59.cloudfront.net/latest/img/favicon.ico" />
+        <link rel="shortcut icon" href="https://d3uybqv7a64u59.cloudfront.net/latest/img/favicon.ico" />
+
 		<!-- elFinder initialization (REQUIRED) -->
 		<script type="text/javascript" charset="utf-8">
             // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
             // Documentation for client options:
 			$(document).ready(function() {
 				$('#elfinder').elfinder({
-					url : 'filemanager/php/connector.php',  // connector URL (REQUIRED)
+					url : 'php/connector.php',  // connector URL (REQUIRED)
                     defaultView: "list",
                     commands : [
                         'open', 'reload', "up",
