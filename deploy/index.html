@@ -10,15 +10,28 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 
 		<!-- elFinder CSS (REQUIRED) -->
-        <link rel="stylesheet" type="text/css" href='https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/css/elfinder.min.css'>
-        <link rel="stylesheet" type="text/css" href='https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/css/theme.css'>
+        <link rel="stylesheet" type="text/css" href='//wakari-static.s3.amazonaws.com/latest/apps/elFinder/css/elfinder.min.css'>
+        <link rel="stylesheet" type="text/css" href='//wakari-static.s3.amazonaws.com/latest/apps/elFinder/css/theme.css'>
+
+        <style type="text/css">
+            body {
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+            h1 {
+                font-weight: 500;
+                line-height: 1.1;
+            }
+            .container {
+                padding: 0px 35px;
+            }
+        </style>
 
 		<!-- elFinder JS (REQUIRED) -->
-        <script src='https://d3uybqv7a64u59.cloudfront.net/latest/apps/elFinder/js/elfinder.min.js'></script>
-        <script src='https://d3uybqv7a64u59.cloudfront.net/latest/application.js'></script>
+        <script src='//wakari-static.s3.amazonaws.com/latest/apps/elFinder/js/elfinder.min.js'></script>
+        <script src='//wakari-static.s3.amazonaws.com/latest/application.js'></script>
 
-        <link rel="icon" href="https://d3uybqv7a64u59.cloudfront.net/latest/img/favicon.ico" />
-        <link rel="shortcut icon" href="https://d3uybqv7a64u59.cloudfront.net/latest/img/favicon.ico" />
+        <link rel="icon" href="//wakari-static.s3.amazonaws.com/latest/img/favicon.ico" />
+        <link rel="shortcut icon" href="//wakari-static.s3.amazonaws.com/latest/img/favicon.ico" />
 
 		<!-- elFinder initialization (REQUIRED) -->
 		<script type="text/javascript" charset="utf-8">
@@ -34,14 +47,16 @@
                         'cut', 'paste',   'search', 'help'
                     ]
 
-
 				});
 			});
 		</script>
 	</head>
 	<body>
-		<!-- Element where elFinder will be created (REQUIRED) -->
-		<div id="elfinder"></div>
-
-	</body>
+        <div class="container">
+            <h1>File Manager</h1>
+            <p>Drag and drop files from your computer to upload them to Wakari.</p>
+            <!-- Element where elFinder will be created (REQUIRED) -->
+            <div id="elfinder"></div>
+        </div>
+    </body>
 </html>
