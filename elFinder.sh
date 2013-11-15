@@ -1,20 +1,40 @@
 #!/bin/bash
 PORT=$1
 URLPREFIX=$2
-el_dir=/opt/wakari/elFinder/
+el_dir=/opt/wakari/elFinder
 user_project_dir=${el_dir}/deploy${URLPREFIX}
+arr=`echo $URLPREFIX | tr "/" "\n"`
 
-log="/tmp/elFinder.log"
-echo "init log" > $log
+#Can't seem to get this as a bash array without the copy -- $arr[0]
+j=0
+for i in $arr
+do
+    data[$j]=$i
+    j=$((j+1))
+done
+
+for i in $data
+do
+    echo "> $i"
+done
+
+user=${data[0]}
+project=${data[1]}
+
+log="/var/log/wakari/appLogs/$user/$project/$user/filemanager.log"
+echo $log
+#echo "init log" > $log
 id >> $log
-echo $1 >> $log
-echo $2 >> $log
-echo $el_dir >> $log
-echo $user_project_dir >> $log
+echo $1 
+echo $2 
+echo $el_dir 
+echo $user_project_dir 
 
+echo "PORT"
 echo $PORT, $URLPREFIX, $el_dir
 echo ${user_project_dir}
-if [ ! -d ${user_project_dir} ] 
+
+if [ ! -d ${user_project_dir} ]
     then
         echo "Creating dir"
         mkdir -p ${user_project_dir}
