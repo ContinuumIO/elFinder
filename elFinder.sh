@@ -46,3 +46,6 @@ fi
 p=`echo ${URLPREFIX} | cut -d '/' -f 1-3`
 p_home='/projects'${p}
 export PROJECT_HOME=${p_home}
+
+cd ${el_dir}/deploy
+/usr/bin/php -S 0.0.0.0:$PORT 
